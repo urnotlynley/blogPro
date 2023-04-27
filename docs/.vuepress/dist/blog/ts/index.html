@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>: number   : string   是类型注解 | urnotlynley的笔记</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="urnotlynley的笔记">
+    
+    <link rel="preload" href="/assets/css/0.styles.e8e4f3a3.css" as="style"><link rel="preload" href="/assets/js/app.add3ed1a.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/14.f6cda76d.js" as="script"><link rel="prefetch" href="/assets/js/10.ad641c96.js"><link rel="prefetch" href="/assets/js/11.eb8b99f9.js"><link rel="prefetch" href="/assets/js/12.e1a80301.js"><link rel="prefetch" href="/assets/js/13.0ab32a28.js"><link rel="prefetch" href="/assets/js/15.66d3e3eb.js"><link rel="prefetch" href="/assets/js/3.df158bf2.js"><link rel="prefetch" href="/assets/js/4.d12742be.js"><link rel="prefetch" href="/assets/js/5.216cae74.js"><link rel="prefetch" href="/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/assets/js/7.9c9172a7.js"><link rel="prefetch" href="/assets/js/8.9a6adf03.js"><link rel="prefetch" href="/assets/js/9.55a6aaba.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e8e4f3a3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">urnotlynley的笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>slidev</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/slidev/" class="sidebar-link">layout布局</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>正则匹配</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Electron</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Nuxt</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>react</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>ts</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/ts/" aria-current="page" class="active sidebar-link">: number   : string   是类型注解</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>V3使用记录</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="number-string-是类型注解"><a href="#number-string-是类型注解" class="header-anchor">#</a> : number   : string   是类型注解</h3> <p>最后一个number是返回类型注解
+function getTotal(one: number, two: number): number {
+return one + two;
+}
+如果没有返回值可以写 :void
+永远无法执行完毕写 : never</p> <h3 id="interface"><a href="#interface" class="header-anchor">#</a> interface</h3> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">interface</span> <span class="token class-name">Person</span><span class="token punctuation">{</span>
+    <span class="token keyword">readonly</span> id<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">;</span>
+	name<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">;</span>
+	age<span class="token operator">?</span><span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>interface类型不能少属性也不能多属性,属性加了问号表示可选可不选</p> <p>如果想多传数据可以写成:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">[</span>propName<span class="token operator">:</span> string<span class="token punctuation">]</span><span class="token operator">:</span> any
+</code></pre></div><p>readonly表示只读不能改变</p> <div class="language- extra-class"><pre class="language-text"><code>interface ISun{
+	(x:number,y:number,z?:number):number
+}
+</code></pre></div><p>最后一个冒号表示返回值类型, 直接写的话要写成=&gt;</p> <div class="language- extra-class"><pre class="language-text"><code>let add2= (x:number, y: number, z?: number) =&gt; number = add
+等于
+let add2:Isum = add
+</code></pre></div><h3 id="function"><a href="#function" class="header-anchor">#</a> function</h3> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> b<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> c<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> c <span class="token operator">===</span> <span class="token string">'number'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b <span class="token operator">+</span> c
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>必选参数不能位于可选参数后</strong></p> <p>函数解构设置类型
+function add({ one, two }: { one: number, two: number }): number {
+return one + two;
+}</p> <p>多种数据类型
+const arr: (number | string)[] = [1, &quot;string&quot;, 2]</p> <h3 id="class类"><a href="#class类" class="header-anchor">#</a> class类</h3> <p>访问修饰符:</p> <p><strong>public</strong>  共有属性</p> <p><strong>private</strong>  私有属性</p> <p><strong>protected</strong>  受保护了, 子类可以使用</p> <p><strong>readonly</strong> 只读属性</p> <p>extends用来继承类，implements用来实现一个接口</p> <p>可以使用 <strong>implements</strong> 来实现接口</p> <h3 id="enum枚举"><a href="#enum枚举" class="header-anchor">#</a> <strong>enum</strong>枚举</h3> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> list <span class="token punctuation">{</span>
+	Up<span class="token operator">=</span> <span class="token string">'UP'</span><span class="token punctuation">,</span>
+	Down <span class="token operator">=</span> <span class="token string">'DOWN'</span><span class="token punctuation">,</span>
+	Left <span class="token operator">=</span> <span class="token string">'LFET'</span><span class="token punctuation">,</span>
+	Right <span class="token operator">=</span> <span class="token string">'RIGHT'</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在枚举前面加const  表示常量枚举</p> <h3 id="type类型别名"><a href="#type类型别名" class="header-anchor">#</a> type类型别名</h3> <p>type关键字</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">type</span> <span class="token class-name">PlusType</span> <span class="token operator">=</span> <span class="token punctuation">(</span>x<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">,</span>y<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token builtin">number</span>
+</code></pre></div><h5 id="也可以使用固定字符串自变量"><a href="#也可以使用固定字符串自变量" class="header-anchor">#</a> 也可以使用固定字符串自变量</h5> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">type</span> <span class="token class-name">Directions</span> <span class="token operator">=</span> <span class="token string">'Up'</span> <span class="token operator">|</span> <span class="token string">'Down'</span> <span class="token operator">|</span> <span class="token string">'Left'</span> <span class="token operator">|</span> <span class="token string">'Right'</span>
+</code></pre></div><p>这样可以固定变量只能是这四个当中的一个,不能是其他值</p> <h5 id="交叉类型"><a href="#交叉类型" class="header-anchor">#</a> 交叉类型</h5> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">interface</span> <span class="token class-name">IName</span> <span class="token punctuation">{</span>
+	name<span class="token operator">:</span><span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">type</span> <span class="token class-name">IPerson</span> <span class="token operator">=</span> Iname <span class="token operator">&amp;</span> <span class="token punctuation">{</span>age<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">}</span>
+<span class="token keyword">let</span> person<span class="token operator">:</span>Iperson <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token operator">:</span><span class="token string">'132'</span><span class="token punctuation">,</span>age<span class="token operator">:</span><span class="token number">123</span><span class="token punctuation">}</span>
+</code></pre></div><p>声明文件:       .d.ts</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/react/" class="prev">
+        react学习
+      </a></span> <span class="next"><a href="/blog/v3true/">
+        V3使用心得
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.add3ed1a.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/14.f6cda76d.js" defer></script>
+  </body>
+</html>
